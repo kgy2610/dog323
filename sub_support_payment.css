@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'nanumL';
+  src: url('font/NanumSquareRoundL.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nanumR';
+  src: url('font/NanumSquareRoundR.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nanumB';
+  src: url('font/NanumSquareRoundB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nanumEB';
+  src: url('font/NanumSquareRoundEB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+#donation {
+    width: 100%; height: 650px;
+    text-align: center;
+}
+
+#donation-hd {
+    width: 100%; height: 70px;
+    padding-top: 40px;
+}
+#donation-hd > h1 {
+    color: #734D32;
+    font-size: 35px;
+    font-family: 'nanumEB';
+    letter-spacing: -1px;
+    transform : rotate(0.04deg); 
+}
+#donation-hd > hr {
+    background-color: #E6D7CB;
+    margin-top: 30px;
+    height: 3px;
+    border: 0;
+}
+#donation-box {
+    width: 500px; height: 300px;
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 3px solid #E6D7CB;
+}
+#box-hd {
+    width: 450px; height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+}
+#box-hd > h1 {
+    color: #734D32;
+    font-size: 30px;
+    float: left;
+    font-family: 'nanumEB';
+    transform : rotate(0.04deg); 
+    margin: 20px 0px 0px 25px;
+}
+#counter {
+    width: 160px; height: 40px;
+    color: #734D32;
+    font-size: 30px;
+    font-family: 'nanumEB';
+    transform : rotate(0.04deg); 
+    padding: 20px 0px 0px 50px;
+    text-align: right;
+    display: inline-block;
+}
+
+#box-hd > h2 {
+    font-size: 30px;
+    color: #734D32;
+    margin-right: 10px;
+    font-family: 'nanumEB';
+    transform : rotate(0.04deg); 
+    text-align: right;
+    display: inline-block;
+} 
+#box-hd > button {
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}
+#box-hd > hr {
+    background-color: #E6D7CB;
+    margin-top: 20px;
+    height: 5px;
+    border: 0;
+}
+#plus-opt {
+    width: 470px; height: 130px;
+    padding-top: 10px;
+}
+#plus-opt > button {
+    width: 145px; height: 55px;
+    background-color: white;
+    border-radius: 50px;
+    border: 2.5px solid #B78B6C4D;
+    margin: 2px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #734D32;
+    font-family: 'nanumEB';
+    transform : rotate(0.04deg); 
+    cursor: pointer;
+}
+#plus-opt > button:hover {
+    background-color: #FFF2DC;
+}
+#payment > h1 {
+    font-size: 25px;
+    font-family: 'nanumEB';
+    transform : rotate(0.04deg); 
+    color: #734D32;
+    letter-spacing: -1px;
+    margin-top:30px;
+}
+#payment > button {
+    width: 500px; height: 70px;
+    margin-top: 30px;
+    margin-left: -20px;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>반려가이드</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="sub_helper_guide.css">
+  <link rel="icon" href="img/favicon-32x32.png">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+  <style>
+  	@font-face {
+  font-family: 'nanumL';
+  src: url('font/NanumSquareRoundL.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nanumR';
+  src: url('font/NanumSquareRoundR.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nanumB';
+  src: url('font/NanumSquareRoundB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'nanumEB';
+  src: url('font/NanumSquareRoundEB.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+body{
+  margin:0px;
+  padding:0px;
+  text-align: center;
+  font-family: 'nanumEB';
+  letter-spacing: -1px;
+  font-size: 14px;
+  color:black;
+  /* overflow-y: hidden; */
+}
+img{
+  border: 0px;
+}
+#wrap {
+	margin: 0 auto;
+	width: 100%;
+  height: 100%;
+}
+#helper-bg {
+  width: 100%;
+  height: 1250px;
+  position: relative;
+  margin-top: -110px;
+}
+
+#helper-hd > hr {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1614px;
+  height: 1.5px;
+  background-color: rgba(212, 171, 141, 0.3);
+  border: 0;
+}
+#helper-hd2 {
+  width: 200px;
+  height: 100px;
+  margin-top: 85px;
+}
+#helper-hd2 > h2 {
+font-size: 20px;
+color: #B78B6C;
+}
+#helper-hd2 > h1 {
+font-size: 40px;
+color: #734D32;
+font-weight: 700;
+font-family: 'nanumEB';
+letter-spacing: -2px;
+transform : rotate(0.04deg); 
+
+}
+#helper-hd2 > hr {
+  width: 155px;
+  height: 6px;
+  background-color: #FF9E00;
+  border: 0;
+  border-radius: 10px;
+  }
+
+#guide  {
+  width: 1400px; height: 900px;
+  margin-top: 45px;
+}
+
+.guide-card {
+  width: 636px; height: 252px;
+  border: 5px solid #E6D7CB;
+  background-color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 18px;
+}
+
+.guide-card:hover {
+  background-color: #FFFAF0;
+}
+
+.guide-card > a {
+  text-decoration: none;
+  text-align: left;
+}
+
+.guide-card > a > h1 {
+  font-size: 40px;
+  font-family: 'nanumEB'; 
+  color: #734D32;
+  letter-spacing: -1px;
+  margin: 72px 0px 0px 69px;
+  width: 160px;
+
+}
+
+.guide-card > a > h2  {
+  font-size: 23px;
+  font-family: 'nanumR';
+  letter-spacing: -1px;
+  color: #734D32;
+  margin: 11px 0px 0px 69px;
+  width: 300px;
+  position: absolute;
+}
+
+.guide-card > a > img {
+  float: right;
+  position: relative;
+  bottom: 55px;
+  right: 45px;
+}
+
+#guide-bg {
+  width: 100%; height: 100%;
+  margin-top: 50px;
+  position: absolute;
+}
+
+
+
+
+/* footer */
+#footer{
+  width: 100%; height: 280px;
+  background-color: #734D32;
+  position:relative;
+  /* top: 3700px; */
+}
+#footer > ul{
+  list-style-type: none;
+}
+#footer > ul > #info{
+  float: left;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+#footer > ul > #info > ul{
+  list-style-type: none;
+  text-align: left;
+}
+#footer > ul > #info > ul > li{
+  color: #fff;
+  font-size: 18px;
+  font-family: 'nanumR';
+  transform : rotate(0.04deg); 
+}
+#footer > ul > #footer_logo{
+  float: right;
+  margin-right: 200px;
+  margin-top: 100px;
+}
+#footer > ul > #footer_logo > ul{
+  list-style-type: none;
+  text-align: right;
+}
+#footer > ul > #footer_logo > ul > li{
+  color: #fff;
+  font-size: 18px;
+}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <section id="helper-bg">
+      <article id="helper-hd">
+        <hr>
+        <div id="helper-hd2">
+          <h2>HELPER</h2>
+          <h1>반려가이드</h1>
+          <hr>
+        </div>
+        <div id="guide">
+          <button class="guide-card" onclick="goToPage('./sub_helper_guide_1_rr.html')">
+            <a href="sub_helper_guide_1_rr.html">
+            <h1>사료 급여</h1>
+            <h2>사료 급여 방법 및 시기</h2>
+            <img src="./img/guide1.png" width="133px" height="133px">
+            </a>
+          </button>
+          <button class="guide-card" onclick="goToPage('./sub_helper_guide_2.html')">
+            <a href="sub_helper_guide_2.html">
+            <h1>배변 교육</h1>
+            <h2>올바른 배변 교육 방법 및 식분증</h2>
+            <img src="./img/guide2.png" width="165px" height="133px">
+            </a>
+          </button>
+          <button class="guide-card" onclick="goToPage('./sub_helper_guide_3.html')">
+            <a href="sub_helper_guide_3.html">
+            <h1>중성화</h1>
+            <h2>중성화 이유 및 시기, 마운팅</h2>
+            <img src="./img/guide3.png" width="133px" height="133px">
+            </a>
+          </button>
+          <button class="guide-card" onclick="goToPage('./sub_helper_guide_4.html')">
+            <a href="sub_helper_guide_4.html">
+            <h1>목욕</h1>
+            <h2>목욕 방법 및 시기</h2>
+            <img src="./img/guide4.png" width="133px" height="133px">
+            </a>
+          </button>
+          <button class="guide-card" onclick="goToPage('./sub_helper_guide_5.html')">
+            <a href="sub_helper_guide_5.html">
+            <h1>종합백신</h1>
+            <h2>접종 이유 및 종류</h2>
+            <img src="./img/guide5.png" width="133px" height="133px">
+            </a>
+          </button>
+          <button class="guide-card" onclick="goToPage('./sub_helper_guide_6.html')">
+            <a href="sub_helper_guide_6.html">
+            <h1>케어</h1>
+            <h2>발톱 케어 및 빗질 케어</h2>
+            <img src="./img/guide6.png" width="133px" height="133px">
+            </a>
+          </button>
+        </div>
+    </section>
+    <script>
+      function goToPage(page) {
+          window.location.href = page;
+      }
+      </script>
+  </div>
+</body>
+</html>

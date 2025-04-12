@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>login</title>
+  <style>
+  *{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+body{
+  margin:0px;
+  padding:0px;
+  font-size: 14px;
+  color:black;
+}
+header{
+  width: 100%;height: 380px;
+  margin:0 auto;
+  position: relative;
+  margin-top: 40px;
+}
+#logo{
+  display : block;
+  margin: auto;
+  padding-top: 30px;
+ 
+}
+#logo>img{
+    width:180px;
+    display : block;
+  margin: auto;
+}
+#login-header{
+    font-size:30px;
+    color:#734D32;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+form {
+    margin: auto;
+    width: 450px;
+    height: 520px;
+    background-color: #FFF2DC;
+    border-style:solid;
+    border-color: #734D32;
+    border-radius:25px;
+    text-align: center;
+    padding: 20px;
+    margin-top: -170px;
+}
+.login{
+    font-size: 32px;
+    color: #734D32;
+    font-weight:1000;
+    padding-bottom: 20px;
+}
+input {
+  clear: both;
+    width: 350px;
+    height:44px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 90px;
+    border-color: #734D32;
+    margin-top: 10px;
+}
+form>table>tr>td>img{
+    width: 10px;
+}
+#btn {
+    background-color: #FF9E00;
+    color: white;
+    font-size: 25px;
+    width:250px;
+    height: 50px;
+    border-radius: 90px;
+    border :none;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+  
+  
+</head>
+<body>
+  <div>
+    <p>
+      <header> 
+        <div id="logo">
+          <img src="./icon/logo.png">
+          <script>
+            // 로고를 클릭했을 때 메인 화면으로 이동하는 함수
+            function goToMain() {
+                window.location.href = "main.html"; // 메인 화면의 URL로 이동
+            }
+        
+            // 로고 이미지에 클릭 이벤트 핸들러 등록
+            document.querySelector('img').addEventListener('click', goToMain);
+        </script>
+        </div>
+        <p id="login-header">지금 DOG 323에 가입하여<br>세상의 모든 강아지를 따뜻하게 안아주세요</p>
+      </header>
+    </p>
+    <div>
+        <form action="">
+            <p class="login">회원가입</p>
+            <table>
+		
+                <tr>
+                    <td width=100 ><img id="ID-icon" src="./icon/ID.png" alt="아이디 아이콘" /></img></td>
+                    <td> <input type=text name="memId" placeholder="아이디 10~17자"></td>
+                </tr>
+                <tr>
+                    <td><img id="ID-icon" src="./icon/PW.png" alt="아이디 아이콘" /></img></td>
+                    <td><input type=password name="memPasswd" placeholder="비밀번호 10~17자"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type=password name="memName" placeholder="비밀번호 확인"></td>
+                </tr>
+                <tr>
+                  <td><img id="ID-icon" src="./icon/ID.png" alt="아이디 아이콘" /></img></td>
+                  <td>
+                      <input type=text name=memName placeholder="이름">
+                  </td>
+              </tr>
+                <tr>
+                    <td><img id="ID-icon" src="./icon/joomin.png" alt="아이디 아이콘" /></img></td>
+                    <td>
+                        <input type=text name=memJoomin placeholder="생년월일 8자리">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img id="ID-icon" src="./icon/email.png" alt="아이디 아이콘" /></img></td>
+                    <td><input type=text name=memEmail1 placeholder="이메일">
+                </tr>
+                <tr>
+                    <td><img id="ID-icon" src="./icon/phone.png" alt="아이디 아이콘" ></img></td>
+                    <td>
+				             <input type=text name=memPhone2 placeholder="핸드폰번호">
+                  
+                    </td>
+                </tr>
+                </table>
+        </form>
+        
+    </div>
+    <div class="modal-footer justify-content-center" style="text-align: center">
+   <input type="submit" id="btn" value="JOIN US!"></div>
+</body>

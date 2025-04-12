@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>전단지 제작</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./leaflet.css">
+  <link rel="icon" href="./img/favicon-32x32.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  <style>
+  	.uploaded-image{
+		width: 700px;
+		height: 700px;
+		font-size: 23px;
+		position: relative;
+		margin-top: 480px;
+		border-radius: 100px;
+		border: 20px #ffffff solid;
+		left: 20px;
+	 }
+	 #leaflet-body {
+		width: 100%;
+		margin-top: 40px;
+	  }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <section id="leaflet-body">
+      <hr>
+      <div id="lft-hd">
+        <h2>FIND ME</h2>
+        <h1>전단지 제작</h1>
+        <hr>
+      </div>
+
+      <div id="leaflet">
+        <div id="lf-1">
+          <h1>강아지를 찾습니다</h1>
+          </div>
+          <div id="lf-img">
+            <input type="file" id="fileInput" class="lf-img-up">
+            <label for="fileInput"><img src="./img/file.png" width="80px" height="80px" style="top:0px; left:-300px; position:relative;"></label>
+          </div>
+          <div id="lf-2">
+              <input type="text" placeholder="견종 / 성별 / 나이 / 이름">
+          </div>
+          <div id="lf-3">
+              <input type="text" placeholder="00월 00일 00시경 00동 0000 인근에서 실종">
+          </div>
+          <div id="lf-4">
+            <input type="text" placeholder="강아지 특징을 입력해주세요">
+          </div>
+          <div id="lf-5">
+            <input type="text" placeholder="010-0000-0000">
+          </div>
+          <div id="lf-6">
+              <h1>위의 강아지를 목격하거나 보호하고 있는 분이 계신다면 위 번호로 연락 바랍니다</h1>
+              <hr>
+              <h2>강아지를 찾으면 전단지는 직접 수거하겠습니다.</h2>
+              <img src="img/main_logo.png">
+          </div>
+        </div>
+        <button type="button" class="btnScreenShot" id="btnScreenShot">저장하기</button>
+      </div>
+      <script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+		  var file = this.files[0];
+		  if (file) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+			  var image = document.createElement('img');
+			  image.src = e.target.result;
+			  image.className = 'uploaded-image';
+			  document.getElementById('lf-img').appendChild(image);
+			}
+			reader.readAsDataURL(file);
+		  }
+		});
+
+      </script>
+
+
+    </section>
+    </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+          var file = this.files[0];
+          if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              document.getElementById('preview').setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(file);
+          }
+        });
+      </script>
+
+<script>
+  document.getElementById('btnScreenShot').addEventListener('click', function() {
+  html2canvas(document.querySelector("#leaflet"), {
+    onrendered: function(canvas) {
+      let link = document.createElement('a');
+      link.href = canvas.toDataURL();
+      link.download = 'screenshot.png';
+      link.click();
+    }
+  });
+});
+
+  </script>
+  </body>
+  </html>

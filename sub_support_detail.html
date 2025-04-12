@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>후원하기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="sub_support_detail.css">
+  <link rel="icon" href="img/favicon-32x32.png">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+  <style>
+  	@font-face {
+	  font-family: 'nanumL';
+	  src: url('font/NanumSquareRoundL.ttf');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+	@font-face {
+	  font-family: 'nanumR';
+	  src: url('font/NanumSquareRoundR.ttf');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+	@font-face {
+	  font-family: 'nanumB';
+	  src: url('font/NanumSquareRoundB.ttf');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+	@font-face {
+	  font-family: 'nanumEB';
+	  src: url('font/NanumSquareRoundEB.ttf');
+	  font-weight: normal;
+	  font-style: normal;
+	}
+
+	*{
+	  margin: 0 auto;
+	  padding: 0 auto;
+	}
+	body{
+	  margin:0px;
+	  padding:0px;
+	  text-align: center;
+	  font-family: 'nanumEB';
+	  letter-spacing: -1px;
+	  font-size: 14px;
+	  color:black;
+	  /* overflow-y: hidden; */
+	}
+	img{
+	  border: 0px;
+	}
+	#wrap {
+		margin: 0 auto;
+		width: 100%;
+	}
+	/* 헤더 */
+	header{
+	  width: 100%;height: 120px;
+	  background-color: rgba(255, 255, 255, 0.8);
+	  position: relative;
+	  padding-top: 30px;
+	  position: fixed;
+	  z-index: 9999;
+	  margin-top: -40px;
+	}
+	header > #logo > a > img{
+	  float: left;
+	  margin: 0px 0 0 130px;
+	}
+
+	header > #nav{
+	  width: 1045px; height: 85px;
+	  margin-left: 430px;
+	  background-color: #fff;
+	  border-radius: 70px;
+	  box-shadow: 0px 0px 3px 2px rgba(183, 139, 108, 0.2);
+	  position: fixed;
+	}
+	header > #nav > ul{
+	  width: 925px; height: 85px;
+	  list-style-type: none;
+	}
+	header > #nav > ul > li{
+	  float: left;
+	  margin-left: 90px;
+	  line-height: 90px;
+	}
+	header > #nav > ul > li:first-child{
+	  margin: 0;
+	}
+	header > #nav > ul > li > a{
+	  padding-bottom: 20px;
+	  font-size: 25px;
+	  letter-spacing: -1px;
+	  display: block;
+	  color: #734D32;
+	  font-family: 'nanumEB';
+	  transform : rotate(0.04deg); 
+	  text-decoration: none;
+	}
+	header > #nav > ul > li > a:hover{
+	  color: #FF9E00;
+	  -webkit-text-stroke: #FF9E00 0.2px;
+	}
+	header > #nav > ul > li:hover > #mega-menu{
+	  display: block;
+	}
+	#mega-menu{
+	  width: 1045px; height: 200px;
+	  background-color: white;
+	  position: absolute;
+	  top: 110px; left: 0px;
+	  display: none;
+	  background: rgba(255, 255, 255, 0.95);
+	  box-shadow: 0px 0px 3px 2px rgba(183, 139, 108, 0.2);
+	  border-radius: 30px;
+	  z-index: 9999;
+	}
+	.list_lnb{
+	  padding: 0;
+	  margin: 25px 3px 0px 28px;
+	  list-style: none;
+	  float: left;
+	  line-height: 50px;
+	  width: 15%;height: inherit;
+	}
+	.list_lnb:first-child{
+	  margin-left: 50px;
+	}
+	.list_lnb:nth-child(4){
+	  margin-left: 55px;
+	}
+	.list_lnb:last-child{
+	  margin-left: 45px;
+	  text-align: center;
+	}
+	.list_lnb > li > a{
+	  font-size: 18px;
+	  font-family: 'nanumB';
+	  letter-spacing: -1px;
+	  transform : rotate(0.04deg); 
+	  color: #734D32;
+	  text-decoration: none;
+	  text-align: center;
+	  display: block;
+	}
+	.list_lnb > li > a:hover{
+	  color: #FF9E00;
+	}
+	#icon > ul{
+	  list-style-type: none;
+	  float: right;
+	  margin-top: 20px;
+	  margin-right: 160px;
+	  line-height: 70px;
+	}
+	#icon > ul > li{
+	  float: left;
+	  margin-left: 25px;
+	}
+	#search > .mn{
+	  border: none;
+	}
+
+
+
+	#helper-bg {
+	  width: 100%;
+	  height: 1500px;
+	  position: relative;
+	  top: 110px;
+	}
+
+	#helper-hd > hr {
+	  margin-top: 40px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 1614px;
+	  height: 3px;
+	  background-color: #D4AB8D4D;
+	  border: 0;
+	}
+
+	#spt-details {
+	  width: 1430px; height: 1500px;
+	  margin-top: 100px;
+	}
+
+	#spt-img {
+	  float: left;
+	  margin-right: 65px;
+	}
+	#spt-img > img {
+	  border-radius: 10px;
+	}
+	#spt-hd {
+	  width: 550px; height: 126px;
+	  float: left;
+	  margin-top: 30px;
+	}
+	#spt-hd > h1 {
+	  font-size: 35px;
+	  color: #734D32;
+	  letter-spacing: -1px;
+	  text-align: left;
+	}
+	#spt-hd > h2 {
+	  font-size: 25px;
+	  color: #B78B6C;
+	  letter-spacing: -1px;
+	  margin-top: 20px;
+	  text-align: left;
+	  font-family: 'nanumR';
+	}
+
+	#spt-pcbox {
+	  width: 100%; height: 185px;
+	  margin-top: 46px;
+	  border: 3px solid #E6D7CB;
+	  border-radius: 20px;
+	}
+	#spt-pcbox2 {
+	  width: 129px; height: 40px;
+	  background-color: #FFDDA1;
+	  border-radius: 10px;
+	  float: left;
+	  margin: 34px 0px 0px 39px;
+	}
+	#spt-pcbox2 > h3 {
+	  font-size: 20px;
+	  color: #734D32;
+	  margin-top: 10px;
+	}
+	#spt-progress {
+	  width: 484px; height: 20px;
+	  margin-top: 25px;
+	  appearance: none;
+	}
+	#spt-progress::-webkit-progress-bar {
+	  background-color: #FFF2DC;
+	  border: none;
+	  border-radius: 50px;
+	}
+	#spt-progress::-webkit-progress-value {
+	  background-color: #FF9E00;
+	  border-radius: 50px;
+	}
+	#spt-pcbox > h1 {
+	  float: left;
+	  font-size: 20px;
+	  color: #734D32;
+	  letter-spacing: -1px;
+	  margin: 16px 0px 0px 44px;
+	}
+	#spt-pcbox > h2 {
+	  float: right;
+	  font-size: 20px;
+	  color: #734D32;
+	  letter-spacing: -1px;
+	  margin-top: 16px;
+	  margin-right: 40px;
+	}
+	#spt-pcbox3 {
+	  width: 549px; height: 200px;
+	  margin-top: 50px;
+	}
+	#spt-pcbox3 > h2 {
+	  font-size: 25px;
+	  color: #734D32;
+	  font-family: 'nanumR';
+	  letter-spacing: -1px;
+	}
+	#spt-pcbox3 > h1 {
+	  font-size: 27px;
+	  color: #734D32;
+	  font-family: 'nanumEB';
+	  letter-spacing: -1px;
+	  margin-top: 8px;
+	}
+	#spt-pcbox3 > button {
+	  width: 549px; height: 77px;
+	  margin-top: 27px;
+	  background-color: #FF9E00;
+	  border: 3px solid #B78B6C;
+	  border-radius: 50px;
+	  box-shadow: 0px 4px 4px 0px #E6D7CB;
+	  font-size: 34px;
+	  color: #ffffff;
+	  font-family: 'nanumB';
+	  letter-spacing: -1px;
+	  cursor: pointer;
+	}
+	#spt-story {
+	  width: 100%; height: 510px;
+	  display: inline-block;
+	  margin-top: 80px;
+	  border: 3px solid #E6D7CB;
+	  border-radius: 25px;
+	}
+	#spt-story-hd {
+	  width: 347px; height: 80px;
+	  margin-top: 64px;
+	  margin-left: 84px;
+	  float: left;
+	  display: block;
+
+	}
+	#spt-story-hd > h1 {
+	  font-size: 35px;
+	  color: #734D32;
+	  float: left;
+	  font-family: 'nanumB';
+	}
+	#spt-story-hd > img {
+	  float: left;
+	  margin-left: 13px;
+	}
+	#spt-story-hd > hr {
+	  width: 330px; height: 3px;
+	  border: 0;
+	  background-color: #E6D7CB;
+	  margin-top: 60px;
+	}
+	#spt-story-box {
+	  width: 1250px; height: 280px;
+	  margin: 40px;
+	  display: inline-block;
+
+	}
+	#spt-story-box > h2 {
+	  display: block;
+	  font-size: 25px;
+	  color: #734D32;
+	  text-align: left;
+	  line-height: 50px;
+	  font-family: 'nanumR';
+	}
+
+
+
+	/* footer */
+	#footer{
+	  width: 100%; height: 280px;
+	  background-color: #734D32;
+	  position: relative;
+	  top: 110px;
+	}
+	#footer > ul{
+	  list-style-type: none;
+	}
+	#footer > ul > #info{
+	  float: left;
+	  margin-left: 100px;
+	  margin-top: 80px;
+	}
+	#footer > ul > #info > ul{
+	  list-style-type: none;
+	  text-align: left;
+	}
+	#footer > ul > #info > ul > li{
+	  color: #fff;
+	  font-size: 18px;
+	  font-family: 'nanumR';
+	  transform : rotate(0.04deg); 
+	}
+	#footer > ul > #footer_logo{
+	  float: right;
+	  margin-right: 200px;
+	  margin-top: 100px;
+	}
+	#footer > ul > #footer_logo > ul{
+	  list-style-type: none;
+	  text-align: right;
+	}
+	#footer > ul > #footer_logo > ul > li{
+	  color: #fff;
+	  font-size: 18px;
+	}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <!-- 헤더 -->
+  <header>
+      <div id="logo">
+        <a href="./main.html"><img src="./img/main_logo_r.png"></a>
+      </div>
+      <div id="nav">
+        <ul>
+            <li>
+                <a href="#">WITH ME</a>
+                <div id="mega-menu">
+                    <ul class="list_lnb">
+                        <li><a href="./sub_withme_main.jsp">입양하기</a></li>
+                        <li><a href="./insert_withme.jsp">유기견 등록</a></li>
+                        <li><a href="#" onclick="openPopup('sub_test.html')">성격유형테스트</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_findme_main.jsp">찾습니다</a></li>
+                        <li><a href="./sub_findme_watch2.jsp">봤습니다</a></li>
+                        <li><a href="./findmemake.html">전단지 제작</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_support_main.html">후원하기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_community_watchme.html">나를보개</a></li>
+                        <li><a href="#">입양후기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_helper_Procedure.html">입양 절차</a></li>
+                        <li><a href="./sub_helper_dictionary.html">견종백과</a></li>
+                        <li><a href="./sub_helper_guide.html">반려 가이드</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+              <a href="#">FIND ME</a>
+              <div id="mega-menu">
+                    <ul class="list_lnb">
+                        <li><a href="./sub_withme_main.jsp">입양하기</a></li>
+                        <li><a href="./insert_withme.jsp">유기견 등록</a></li>
+                        <li><a href="#" onclick="openPopup('sub_test.html')">성격유형테스트</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_findme_main.jsp">찾습니다</a></li>
+                        <li><a href="./sub_findme_watch2.jsp">봤습니다</a></li>
+                        <li><a href="./findmemake.html">전단지 제작</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_support_main.html">후원하기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_community_watchme.html">나를보개</a></li>
+                        <li><a href="#">입양후기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_helper_Procedure.html">입양 절차</a></li>
+                        <li><a href="./sub_helper_dictionary.html">견종백과</a></li>
+                        <li><a href="./sub_helper_guide.html">반려 가이드</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+              <a href="#">SUPPORT</a>
+              <div id="mega-menu">
+                    <ul class="list_lnb">
+                        <li><a href="./sub_withme_main.jsp">입양하기</a></li>
+                        <li><a href="./insert_withme.jsp">유기견 등록</a></li>
+                        <li><a href="#" onclick="openPopup('sub_test.html')">성격유형테스트</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_findme_main.jsp">찾습니다</a></li>
+                        <li><a href="./sub_findme_watch2.jsp">봤습니다</a></li>
+                        <li><a href="./findmemake.html">전단지 제작</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_support_main.html">후원하기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_community_watchme.html">나를보개</a></li>
+                        <li><a href="#">입양후기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_helper_Procedure.html">입양 절차</a></li>
+                        <li><a href="./sub_helper_dictionary.html">견종백과</a></li>
+                        <li><a href="./sub_helper_guide.html">반려 가이드</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+              <a href="./sub_community_main.html">COMMUNITY</a>
+              <div id="mega-menu">
+                    <ul class="list_lnb">
+                        <li><a href="./sub_withme_main.jsp">입양하기</a></li>
+                        <li><a href="./insert_withme.jsp">유기견 등록</a></li>
+                        <li><a href="#" onclick="openPopup('sub_test.html')">성격유형테스트</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_findme_main.jsp">찾습니다</a></li>
+                        <li><a href="./sub_findme_watch2.jsp">봤습니다</a></li>
+                        <li><a href="./findmemake.html">전단지 제작</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_support_main.html">후원하기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_community_watchme.html">나를보개</a></li>
+                        <li><a href="#">입양후기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_helper_Procedure.html">입양 절차</a></li>
+                        <li><a href="./sub_helper_dictionary.html">견종백과</a></li>
+                        <li><a href="./sub_helper_guide.html">반려 가이드</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+              <a href="#">HELPER</a>
+              <div id="mega-menu">
+                    <ul class="list_lnb">
+                        <li><a href="./sub_withme_main.jsp">입양하기</a></li>
+                        <li><a href="./insert_withme.jsp">유기견 등록</a></li>
+                        <li><a href="#" onclick="openPopup('sub_test.html')">성격유형테스트</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_findme_main.jsp">찾습니다</a></li>
+                        <li><a href="./sub_findme_watch2.jsp">봤습니다</a></li>
+                        <li><a href="./findmemake.html">전단지 제작</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_support_main.html">후원하기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_community_watchme.html">나를보개</a></li>
+                        <li><a href="#">입양후기</a></li>
+                    </ul>
+                    <ul class="list_lnb">
+                        <li><a href="./sub_helper_Procedure.html">입양 절차</a></li>
+                        <li><a href="./sub_helper_dictionary.html">견종백과</a></li>
+                        <li><a href="./sub_helper_guide.html">반려 가이드</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="icon">
+      <ul>
+		  <li>
+		  	<img src="./img/main_user.png" width="33px" height="33px">
+		  </li>	
+        <li>
+          <a href="./logout.jsp"><p>LOGOUT</p></a>
+        </li>
+		<li>
+          <p>|</p>
+        </li>
+        <li>
+          <a href="#"><p>MYPAGE</P></a>
+        </li>
+      </ul>
+    </div>
+    </header>
+
+    <section id="helper-bg">
+      <article id="helper-hd">
+        <hr>
+      </article>
+      <div id="spt-details">
+        <div id="spt-img">
+          <img src="img/달래(푸들).jpg" width="812px" height="636px">
+        </div>
+        <div id="spt-hd">
+          <h1>감자가 다리 수술을 해서 다시 뛰어놀 수 있도록 도와주세요</h1>
+          <h2>평택 안다동물보호소</h2>
+          <div id="spt-pcbox">
+            <div id="spt-pcbox2">
+              <h3>67% 달성</h3>
+            </div>
+            <progress id="spt-progress" value="67" min="0" max="100"></progress>
+            <h1>0원</h1>
+            <h2>1,000,000원</h2>
+          </div>
+          <div id="spt-pcbox3">
+            <h2>기부금 100% 전액은 보호소에 전달됩니다</h2>
+            <h1>마음을 모아 함께 따뜻해져요</h1>
+            <button id="donateButton">기부하기</button>
+				<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+				<script>
+					IMP.init("imp87480883");
+
+					const button = document.querySelector("button");
+
+					const onClickPay = async () => {
+						IMP.request_pay({
+							pg: "kakaopay",
+							pay_method: "card",
+							amount: "200000",
+							name: "후원하기",
+							merchant_uid: "ORD20240514-000001",
+						});
+					};
+
+					button.addEventListener("click", onClickPay);
+				</script>
+          </div>
+        </div>
+        <div id="spt-story">
+          <div id="spt-story-hd">
+          <h1>평택 안다동물보호소</h1><img src="img/spt-img.png" width="33px" height="33px">
+          <hr>
+          </div>
+          <div id="spt-story-box">
+          <h2>안녕하세요 평택에 위치한 안다동물보호소입니다.
+            저희 보호소에는 얼마 전 입소한 감자라는 강아지가 있습니다. 달려오는 차에 치여 오른쪽 뒷다리가 골절되었습니다.
+            현재 저희 보호소의 자금으로는 수술 비용이 마련되지 않아 어렵게 모금 신청을 하게 되었습니다.
+            감자는 원래 성격도 매우 활발하고 산책을 좋아하던 친구였습니다. 
+            다리가 골절되어 정상적으로 걷기도, 산책을 할 수도 없어 아이가 많이 우울해하고 밥도 잘 먹지 않습니다.
+            여러분이 조금만 도와주신다면 감자가 다리 수술을 해서 다치기 전 활발한 모습으로 건강하게 잘 지낼 수 있을 거예요.
+            많은 관심 부탁드립니다. 감사합니다. </h2>
+            </div>
+        </div>
+      </div>
+
+    </section>
+      
+
+  
+    <!-- footer -->
+    <div id="footer">
+      <ul>
+        <li id="info">
+          <ul>
+            <li>개인정보처리방침&nbsp;&nbsp;|&nbsp;&nbsp;이용약관&nbsp;&nbsp;|&nbsp;&nbsp;공지사항&nbsp;&nbsp;|&nbsp;&nbsp;고객센터</li>
+            <li>&nbsp;</li>
+            <li>상호명: (주)DOG323&nbsp;대표: 신서희</li>
+            <li>충청남도 천안시 두정로 1708 2층&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-3831-5022</li>
+            <li>rlagptmd1021@naver.com</li>
+            <li>평일 09:00 - 18:00</li>
+          </ul>
+        </li>
+        <li id="footer_logo">
+          <ul>
+            <li><img src="./img/footer_logo.png"></li>
+            <li>ⒸCopyright 2024 DOG323 CO.LTD All Rights Reserved.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script>
+      // 각 'progress' 태그를 순회합니다.
+$('progress').each(function () {
+    // 'value' 속성을 읽어와 'max' 변수에 저장합니다.
+    const max = $(this).attr('value');
+    // 0에서 'max'까지 1초(1000ms) 동안 애니메이션 합니다.
+    $(this).val(0).animate({ value: max }, 1000);
+});
+      x// progress 모든 요소를 선택합니다.
+const $counters = $("progress");
+
+// 노출 비율(%)과 애니메이션 반복 여부(true/false)를 설정합니다.
+const exposurePercentage = 100; // ex) 스크롤 했을 때 $counters 컨텐츠가 화면에 100% 노출되면 숫자가 올라갑니다.
+const loop = true; // 애니메이션 반복 여부를 설정합니다. (true로 설정할 경우, 요소가 화면에서 사라질 때 다시 숨겨집니다.)
+
+// 각 progress 요소에 대한 value 속성값을 배열에 추가합니다.
+const maxValues = [];
+$counters.each(function() {
+    const max = $(this).attr('value');
+    maxValues.push(max);
+    $(this).val(0);
+});
+
+// 윈도우의 스크롤 이벤트를 모니터링합니다.
+$(window).on('scroll', function() {
+    // 각 "scroll_on" 클래스를 가진 요소에 대해 반복합니다.
+    $counters.each(function(i) {
+        const $el = $(this);
+
+        // 요소의 위치 정보를 가져옵니다.
+        const rect = $el[0].getBoundingClientRect();
+        const winHeight = window.innerHeight; // 현재 브라우저 창의 높이
+        const contentHeight = rect.bottom - rect.top; // 요소의 높이
+        
+        // 요소가 화면에 특정 비율만큼 노출될 때 처리합니다.
+        if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
+            if (!$el.hasClass('animated')){
+                $el.stop().animate({ value: maxValues[i] }, 1000).addClass('animated');
+            }
+        }
+
+        // 요소가 화면에서 완전히 사라졌을 때 처리합니다.
+        if (loop && (rect.bottom <= 0 || rect.top >= window.innerHeight)) {
+            if ($el.hasClass('animated')){
+                $el.stop().val(0).removeClass('animated');
+            }
+        }
+    });
+}).scroll();
+
+  </script>
+</body>
+</html>

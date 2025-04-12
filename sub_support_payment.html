@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>기부하기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sub_support_payment.css">
+</head>
+<body>
+  <section id="donation">
+    <div id="donation-hd">
+    <h1>기부하기</h1>
+    <hr>
+    </div>
+    <div id="donation-box">
+      <div id="box-hd">
+       <h1>기부금액</h1>
+       <div id="counter">0</div>
+       <h2>원</h2>
+       <button type="button"><img src="img/초기화.png" width="20px" height="20px" onclick="showPopup2();"></button>
+       <hr>
+      </div>
+     <div id="plus-opt">
+      <button id="plus5000">+5천원</button>
+      <button id="plus10000">+1만원</button>
+      <button id="plus30000">+3만원</button>
+      <button id="plus50000">+5만원</button>
+      <button id="plus100000">+10만원</button>
+      <button id="plus500000">+50만원</button>
+      </div>
+    </div>
+    <div id="payment">
+      <h1>기부금 100% 전액 보호소에 전달됩니다</h1>
+      <button type="button"><img src="./img/카카오페이.png" width="510px" height="70px" onclick="showPopup();"></button>
+      </div>
+</section>
+
+
+  <script>
+    function showPopup() { window.open("./sub_support_kakaopay.html", "결제창", "width=607px, height=656, left=100, top=50"); }
+    function showPopup2() { window.open("./기부하기.html", "결제창", "width=607px, height=656, left=100, top=50"); }
+
+    const $counter = document.getElementById('counter');
+    const $plus5000 = document.getElementById('plus5000');
+    const $plus10000 = document.getElementById('plus10000');
+    const $plus30000 = document.getElementById('plus30000');
+    const $plus50000 = document.getElementById('plus50000');
+    const $plus100000 = document.getElementById('plus100000');
+    const $plus500000 = document.getElementById('plus500000');
+
+    let num = 0;
+    const render = function() {$counter.innerHTML = num;};
+
+    $plus5000.onclick = function(){
+      num += 5000;
+      console.log('plus5000 버튼클릭', num);
+      render();
+    };
+
+    $plus10000.onclick = function(){
+      num += 10000;
+      console.log('plus10000 버튼클릭', num);
+      render();
+    };
+    $plus30000.onclick = function(){
+      num += 30000;
+      console.log('plus30000 버튼클릭', num);
+      render();
+    };
+    $plus50000.onclick = function(){
+      num += 50000;
+      console.log('plus50000 버튼클릭', num);
+      render();
+    };
+    $plus100000.onclick = function(){
+      num += 100000;
+      console.log('plus100000 버튼클릭', num);
+      render();
+    };
+    $plus500000.onclick = function(){
+      num += 500000;
+      console.log('plus500000 버튼클릭', num);
+      render();
+    };
+
+    const input = document.querySelector('#counter');
+input.addEventListener('keyup', function(e) {
+  let value = e.target.value;
+  value = Number(value.replaceAll(',', ''));
+  if(isNaN(value)) {
+    input.value = 0;
+  }else {
+    const formatValue = value.toLocaleString('ko-KR');
+    input.value = formatValue;
+  }
+})
+
+  </script>
+  </body>

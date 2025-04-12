@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>login</title>
+  <style>
+  *{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+body{
+  margin:0px;
+  padding:0px;
+  font-size: 14px;
+  color:black;
+}
+
+header{
+  width: 100%;height: 380px;
+  margin:0 auto;
+  position: relative;
+  margin-top: 80px;
+}
+#logo{
+  display : block;
+  margin: auto;
+  padding-top: 30px;
+ 
+}
+#logo>img{
+    width:250px;
+    display : block;
+    margin: auto;
+    margin-top: -30px;
+}
+#login-header{
+    font-size:25px;
+    color:#734D32;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+form {
+    width: 500px;
+    height: 480px;
+    background-color: #FFF2DC;
+    border-style:solid;
+    border-color: #734D32;
+    border-radius:25px;
+    text-align: center;
+    padding: 20px;
+    margin-top: -200px;
+}
+.login{
+    font-size: 45px;
+    color: #734D32;
+    font-weight:1000;
+    padding-bottom: 20px;
+}
+input{
+    width: 350px;
+    height:60px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 90px;
+    border-color: #734D32;
+    margin: 18px;
+    margin-top: 17px;
+    font-size: 20px;
+}
+form>img{
+    width: 45px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#btn {
+    background-color: #FF9E00;
+    color: white;
+    font-size: 25px;
+    width:200px;
+    height: 60px;
+    border-radius: 90px;
+    border :none;
+    text-align: center;
+    padding-top: -20px;
+    line-height: 15px;
+    margin-top:30px;
+}
+
+form>h1{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+form>h1>a{
+  text-decoration: none;
+  color: #734D32;
+}
+ul{
+  text-align: center;
+  margin-top: 30px;
+  margin-left: -40px;
+}
+ul>a{
+  text-decoration:none;
+  color: #734D32;
+  font-size: 20px;
+ 
+}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./logincss.css">
+</head>
+<body onLoad="login_focus()">
+  <div>
+    <p>
+      <header> 
+        <div id="logo">
+          <img src="./icon/logo.png" width="70%">
+          <script>
+            // 로고를 클릭했을 때 메인 화면으로 이동하는 함수
+            function goToMain() {
+                window.location.href = "main.html"; // 메인 화면의 URL로 이동
+            }
+        
+            // 로고 이미지에 클릭 이벤트 핸들러 등록
+            document.querySelector('img').addEventListener('click', goToMain);
+        </script>
+        </div>
+        <p id="login-header">“ DOG 323은 세상의 모든 강아지들이 따뜻한 품에서 행복하길 소망합니다 ”</p>
+      </header>
+    </p>
+    <div>
+        <form action="">
+            <p class="login">LOGIN</p>
+            <tr>
+              <td><img id="ID-icon" src="./icon/ID.png" alt="아이디 아이콘" /></img></td>
+              <td><input type="text" name="memId" placeholder="아이디를 입력하세요"></td>
+              </tr>
+              <tr>
+              <td><img id="PW-icon" src="./icon/PW.png" alt="비밀번호 아이콘" /></img></td>
+              <td><input type="password" name="memPasswd" placeholder="비밀번호를 입력하세요"></td>
+              </tr>
+        </table>
+            <h1>
+            <a href="#">아이디찾기 |</a>
+            <a href="#">비밀번호찾기 |</a>
+            <a href="./member.html">회원가입</a>
+            </h1>
+            <input type="button" id="btn" value="LOGIN" a href="javascript:login_check()"><br>
+        </form>
+       
+    </div>
+    <div id="member">
+       <ul>
+          <a href="#">이용약관  |</a>
+          <a href="#">개인정보처리방침  |</a>
+          <a href="#">회원정보 고객센터</a>
+       </ul>
+    </div>
+</body>

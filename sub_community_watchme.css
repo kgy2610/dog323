@@ -1,0 +1,370 @@
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
+}
+/* 나눔 스퀘어 라운드
+Light(300)
+Regular(400)
+Bold(700)
+Extra Bold(800) */
+
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+body{
+  margin:0px;
+  padding:0px;
+  text-align: center;
+  font-family: 'NanumSquareRound';
+  font-size: 14px;
+  color:black;
+}
+img{
+  border: 0px;
+}
+#wrap {
+	margin: 0 auto;
+	width: 100%;
+}
+/* -------community-------- */
+
+#wm-bg {
+  width: 100%;
+  margin-top: 40px;
+}
+#wm-bg > hr {
+  width: 1614px;
+  height: 1.5px;
+  background-color: #734D32;
+  border: 0;
+}
+.wm-hd {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  padding-top: 40px;
+}
+.hd {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.hd > h2{
+    font-weight:bolder;
+    font-size: 20px;
+    color: #B78B6C;
+  }
+.hd > h1 {
+  font-weight:bolder;
+  font-size: 40px;
+  letter-spacing: -1.5px;
+  color: #734D32;
+}
+.hd > hr {
+  width: 158px;
+  height: 6px;
+  border: 0;
+  border-radius: 10px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 3px;
+  background-color: #FF9E00;
+}
+
+
+/* community 카드 */
+#wm-card {
+  width: 1310px; height: 1250px;
+  margin-top: -150px;
+  margin-left: 120px;
+  margin-bottom: 150px;
+  border-right: 2px solid #D4AB8D;
+}
+
+.card-list {
+  width: 100%; height: 370px;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+.card-item {
+  list-style: none;
+  width: 395px;height: 460px;
+  margin: 5px 25px 20px 0px;
+  float: left;
+  border-radius: 20px;
+  border: 3px solid #E6D7CB;
+  letter-spacing: -1px;
+}
+.card-item:hover{
+  background-color: #FFF2DC;
+  border: 3px solid #B78B6C;
+}
+.card-item > a {
+  text-decoration: none;
+}
+.card-item > a > img {
+  width: 343px; height: 257px;
+  padding: 10px 0px 0px 0px;
+  border-radius: 10px;
+}
+.card-namebox {
+  border-radius: 30px;
+  padding-top: 30px;
+}
+.card-namebox > p {
+  color: #734D32;
+  margin-left: 30px;
+  text-align: left;
+  font-size: 23px;
+  font-family: 'NanumSquareRound';
+  letter-spacing: -1px;
+  font-weight: 800;
+  -webkit-text-stroke: #734D32 0.1px;
+}
+.card-item > a > ul{
+    margin-top: 15px;
+  list-style-type: none;
+}
+.card-item > a > ul > li{
+    float: left;
+}
+.card-item > a > #write > p{
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 20px;
+    text-align: left;
+    color: #734D32;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 25px;
+}
+.card-item > a > #user{
+    float: left;
+    margin-top: 16px;
+    margin-left: -20px;
+}
+.card-item > a > #user > li{
+    color: #B78B6C;
+    font-size: 16px;
+    -webkit-text-stroke: #B78B6C 0.3px;
+    line-height: 15px;
+    margin-left: 5px;
+}
+#wm-card > hr{
+    width: 1180px; height: 2px;
+    margin-left: 10px;
+    border: none;
+    background-color: #E6D7CB;
+}
+#comm > ul{
+    list-style-type: none;
+    float: left;
+}
+#comm > #comm-watchme{
+    width: 540px;height: 800px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+#comm > #comm-watchme > li > #icon{
+    margin-left: -60px;
+    padding-bottom: 25px;
+}
+#comm > #comm-watchme > li > #icon > li{
+    list-style-type: none;
+    float: left;
+    color: #734D32;
+    letter-spacing: -1px;
+    line-height: 25px;
+}
+#comm > #comm-watchme > li > #icon > li:nth-child(2){
+    margin-left: 5px;
+    font-size: 25px;
+    font-weight: 800;
+    -webkit-text-stroke: #734D32 0.1px;
+}
+#comm > #comm-watchme > li > #icon > li:last-child{
+    clear: both;
+    font-size: 20px;
+    font-weight: 800;
+    float: right;
+    margin-top: -28px;
+    margin-right: 40px;
+}
+#comm > #comm-watchme > li > #icon > li > a{
+    text-decoration: none;
+    color: #734D32;
+}
+#comm > #comm-watchme > li > #watchlist{
+    clear: both;
+    width: 100%; height: 800px;
+    list-style-type: none;
+    margin: 0 0 0 -40px;
+}
+#watchbox{
+    width: 540px; height: 165px;
+    border: 3px solid #E6D7CB;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+}
+#watchbox:hover{
+    background-color: #FFFAF0;
+}
+#watchbox > img{
+    float: left;
+    padding: 20px;
+}
+#watchbox > .card-content{
+    padding-top: 25px;
+}
+#watchbox > .card-content > h3{
+    font-size: 25px;
+    font-weight: 800;
+    color: #734D32;
+    -webkit-text-stroke: #734D32 0.5px;
+    letter-spacing: -1px;
+}
+#watchbox > .card-content > p{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #734D32;
+    font-weight: 700;
+}
+#watchbox > .card-content > .card-details{
+    float: right;
+    font-size: 16px;
+    color: #B78B6C;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#comm > #comm-review{
+    width: 540px;height: 800px;
+    margin-top: 80px;
+    padding-left: 75px;
+    overflow: hidden;
+    border-left: #E6D7CB 1.5px solid;
+}
+#comm > #comm-review > li > #icon{
+    margin-left: -50px;
+    padding-bottom: 25px;
+}
+#comm > #comm-review > li > #icon > li{
+    list-style-type: none;
+    float: left;
+    color: #734D32;
+    letter-spacing: -1px;
+    line-height: 25px;
+}
+#comm > #comm-review > li > #icon > li:nth-child(2){
+    margin-left: 5px;
+    font-size: 25px;
+    font-weight: 800;
+    -webkit-text-stroke: #734D32 0.1px;
+}
+#comm > #comm-review > li > #icon > li:last-child{
+    clear: both;
+    font-size: 20px;
+    font-weight: 800;
+    float: right;
+    margin-top: -28px;
+    margin-right: 40px;
+}
+#comm > #comm-review > li > #icon > li > a{
+    text-decoration: none;
+    color: #734D32;
+}
+#comm > #comm-review > li > #watchlist{
+    clear: both;
+    width: 100%; height: 800px;
+    list-style-type: none;
+    margin: 0 0 0 -40px;
+}
+
+#nametag{
+    width: 270px; height: 490px;
+    position: fixed;
+    right: 150px;
+    top: 300px;
+}
+#nametag > #write > button{
+    letter-spacing: -1px;
+    width: 265px; height: 67px;
+    font-family: 'NanumSquareRound';
+    font-size: 23px;
+    font-weight: 800;
+    color: #734D32;
+    border: #B78B6C 3px solid;
+    border-radius: 40px;
+    background-color: #FFF2DC;
+}
+#name-box{
+    width: 265px; height: 395px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    border: #B78B6C 3px solid;
+    border-radius: 30px;
+    background-color: #FFFAF0;
+}
+#name-box > #pro-img{
+    margin: 30px 0 15px 0;
+}
+#name-box > #nickname{
+    font-size: 30px;
+    font-weight: 800;
+    color: #734D32;
+    margin-bottom: 15px;
+}
+#name-box > hr{
+    width: 180px; height: 1px;
+    background-color: #B78B6C;
+    border: none;
+}
+#name-box > #pro-info{
+    letter-spacing: -1px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #734D32;
+    margin: 15px 0 15px 0;
+}
+#name-box > #mywrite{
+    margin-top: 23px;
+}
+#name-box > #mywrite > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: #734D32;
+    letter-spacing: -1px;
+}
+#name-box > #mywrite > a:hover{
+    color: #FF9E00;
+}
+#name-box > #pro-rewrite > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: #734D32;
+    letter-spacing: -1px;
+}
+#name-box > #pro-rewrite > a:hover{
+    color: #FF9E00;
+}
+
+#name-box > #mywrite > a:hover{
+    color: #FF9E00;
+}
+#name-box > #pro-rewrite > a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    color: #734D32;
+    letter-spacing: -1px;
+}
+#name-box > #pro-rewrite > a:hover{
+    color: #FF9E00;
+}
